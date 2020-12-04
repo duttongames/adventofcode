@@ -35,11 +35,6 @@ int CountTrees(int xMovement, int yMovement)
 
 			if (line[xPos] == '#')
 			{
-				if (yMovement == 2)
-				{
-					cout << "(" + to_string(xPos) + ", " + to_string(lineCount) + ")" << endl;
-				}
-
 				trees++;
 			}
 		}

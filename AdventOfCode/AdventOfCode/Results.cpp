@@ -1,6 +1,7 @@
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayThree.h"
+#include "DayFour.h"
 
 int main()
 {
@@ -22,7 +23,9 @@ int main()
 	cout << "Trees Encountered: " + to_string(treesFive) << endl;
 
 	long long test = treesOne * treesTwo * treesThree * treesFour * treesFive;
-	cout << "Trees Multiplied: " + to_string(test);
+	cout << "Trees Multiplied: " + to_string(test) << endl;
+
+	cout << "Valid Passports: " + to_string(CheckPassports()) << endl;
 
 	return 0;
 }
