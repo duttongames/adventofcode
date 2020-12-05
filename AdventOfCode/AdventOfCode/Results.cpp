@@ -2,6 +2,7 @@
 #include "DayTwo.h"
 #include "DayThree.h"
 #include "DayFour.h"
+#include "DayFive.h"
 
 int main()
 {
@@ -26,6 +27,8 @@ int main()
 	cout << "Trees Multiplied: " + to_string(test) << endl;
 
 	cout << "Valid Passports: " + to_string(CheckPassports()) << endl;
+
+	cout << "My Seat ID is: " + to_string(GetHighestID()) << endl;
 
 	return 0;
 }

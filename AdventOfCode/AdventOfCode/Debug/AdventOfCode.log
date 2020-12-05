@@ -1,14 +1,17 @@
 ﻿  Results.cpp
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(21,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(23,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(48,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(50,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(52,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayTwo.h(25,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayTwo.h(61,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayThree.h(25,14): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayFour.h(14,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayFour.h(154,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(34): warning C4715: 'ExpenseFix': not all control paths return a value
-C:\Users\Georg\source\repos\AdventOfCode\AdventOfCode\DayOne.h(65): warning C4715: 'ExpenseFixTriple': not all control paths return a value
-  AdventOfCode.vcxproj -> C:\Users\Georg\source\repos\AdventOfCode\Debug\AdventOfCode.exe
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(21,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(23,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(48,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(50,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(52,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwo.h(25,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwo.h(61,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThree.h(25,14): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFour.h(14,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFour.h(154,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFive.h(36,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFive.h(76,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFive.h(91,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(34): warning C4715: 'ExpenseFix': not all control paths return a value
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(65): warning C4715: 'ExpenseFixTriple': not all control paths return a value
+  AdventOfCode.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\Debug\AdventOfCode.exe
