@@ -3,6 +3,7 @@
 #include "DayThree.h"
 #include "DayFour.h"
 #include "DayFive.h"
+#include "DaySix.h"
 
 int main()
 {
@@ -29,6 +30,8 @@ int main()
 	cout << "Valid Passports: " + to_string(CheckPassports()) << endl;
 
 	cout << "My Seat ID is: " + to_string(GetHighestID()) << endl;
+
+	cout << "Questions answered yes: " + to_string(CountAnswers()) << endl;
 
 	return 0;
 }
