@@ -4,6 +4,7 @@
 #include "DayFour.h"
 #include "DayFive.h"
 #include "DaySix.h"
+#include "DaySeven.h"
 
 int main()
 {
@@ -32,6 +33,11 @@ int main()
 	cout << "My Seat ID is: " + to_string(GetHighestID()) << endl;
 
 	cout << "Questions answered yes: " + to_string(CountAnswers()) << endl;
+
+	cout << "The amount of bag colours that contain a shiny gold bag is: " + to_string(FindBagsThatContain("shiny gold")) << endl;
+
+	int bags = 0;
+	cout << "A shiny gold bag contains: " + to_string(CountBags("shiny gold", bags, 1)) + " bags" << endl;
 
 	return 0;
 }

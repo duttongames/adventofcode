@@ -13,6 +13,10 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Day
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFive.h(76,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayFive.h(91,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySix.h(44,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySeven.h(28,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySeven.h(85,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySeven.h(87,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySeven.h(118,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(65): warning C4715: 'ExpenseFixTriple': not all control paths return a value
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(34): warning C4715: 'ExpenseFix': not all control paths return a value
   AdventOfCode.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\Debug\AdventOfCode.exe
