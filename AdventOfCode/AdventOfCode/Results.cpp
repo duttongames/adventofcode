@@ -6,6 +6,7 @@
 #include "DaySix.h"
 #include "DaySeven.h"
 #include "DayEight.h"
+#include "DayNine.h"
 
 int main()
 {
@@ -41,6 +42,8 @@ int main()
 	cout << "A shiny gold bag contains: " + to_string(CountBags("shiny gold", bags, 1)) + " bags" << endl;
 
 	cout << "The Accumulator value once the program has terminated is: " + to_string(GetAccValue()) << endl;
+
+	cout << "The encryption weakness is: " + to_string(GetEncryptionWeakness(GetInvalidNumber())) << endl;
 
 	return 0;
 }
