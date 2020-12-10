@@ -7,6 +7,7 @@
 #include "DaySeven.h"
 #include "DayEight.h"
 #include "DayNine.h"
+#include "DayTen.h"
 
 int main()
 {
@@ -44,6 +45,10 @@ int main()
 	cout << "The Accumulator value once the program has terminated is: " + to_string(GetAccValue()) << endl;
 
 	cout << "The encryption weakness is: " + to_string(GetEncryptionWeakness(GetInvalidNumber())) << endl;
+
+	cout << "The Three Jolt Differences Multiplied by the One Jolt Differences is: " + to_string(GetJoltDifferences()) << endl;
+
+	GetTotalCombinations();
 
 	return 0;
 }
