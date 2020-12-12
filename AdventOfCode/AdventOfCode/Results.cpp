@@ -48,6 +48,8 @@ int main()
 
 	cout << "The Three Jolt Differences Multiplied by the One Jolt Differences is: " + to_string(GetJoltDifferences()) << endl;
 
+	cout << "The Total Number of Adapter Combinations is: " + to_string(GetTotalCombinations()) << endl;
+
 	GetTotalCombinations();
 
 	return 0;

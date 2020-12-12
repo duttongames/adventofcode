@@ -73,54 +73,35 @@ int GetJoltDifferences()
 	return oneJoltDifferences * threeJoltDifferences;
 }
 
-int PrintTribSequence(int currentNumber)
-{
-	vector<long long> dp(currentNumber);
-	dp[0] = dp[1] = 0;
-	dp[2] = 1;
-
-	for (int i = 3; i < currentNumber; i++)
-		dp[i] = dp[i - 1] +
-		dp[i - 2] +
-		dp[i - 3];
-
-	for (int i = 0; i < dp.size(); i++)
-	{
-		cout << dp[i] << endl;
-	}
-
-	return 0;
-}
-
-//Gets the total amount of adapter combinations iteratively.
+//Gets the total amount of adapter combinations.
 long long GetTotalCombinations()
 {
 	long long combinations = 0;
 
-	for (int i = 0; i < adapters.size(); i++)
+	adapters.insert(adapters.begin(), 0);
+	adapters.push_back(adapters[adapters.size() - 1] + 3);
+
+	/*CREDIT TO GAMEPOPPER ON REDDIT FOR THIS SOLUTION*/
+	std::vector<long long> path(adapters.size(), 0);
+	path[path.size() - 1] = 1;
+	for (int i = path.size() - 1; i >= 0; i--)
 	{
-		vector<int> currentCombination;
-
-		for (int j = 0; j < adapters.size(); j++)
+		for (int j = i + 1; j < adapters.size(); j++)
 		{
-			for (int k = 0; k < adapters.size(); k++)
+			if (adapters[j] - adapters[i] <= 3)
 			{
-				if (adapters[j] - adapters[k] > 0 && adapters[j] - adapters[k] < 4)
-				{
-					currentCombination.push_back(adapters[k]);
-				}
+				path[i] += path[j];
 			}
 
-			if (currentCombination.size() == adapters.size())
+			else
 			{
-				combinations++;
+				break;
 			}
-
-			currentCombination.clear();
 		}
 	}
 
-	cout << to_string(combinations) << endl;
+	combinations = path[0];
+	/*CREDIT TO GAMEPOPPER ON REDDIT FOR THIS SOLUTION*/
 
 	return combinations;
 }
