@@ -8,6 +8,7 @@
 #include "DayEight.h"
 #include "DayNine.h"
 #include "DayTen.h"
+#include "DayEleven.h"
 
 int main()
 {
@@ -50,7 +51,13 @@ int main()
 
 	cout << "The Total Number of Adapter Combinations is: " + to_string(GetTotalCombinations()) << endl;
 
-	GetTotalCombinations();
+	ReadSeats();
+
+	cout << "The Total Number of Occupied Seats based on the first set of rules is: " + to_string(GetOccupiedSeats()) << endl;
+
+	ReadSeats();
+
+	cout << "The Total Number of Occupied Seats based on the second set of rules is: " + to_string(GetOccupiedSeatsTwo()) << endl;
 
 	return 0;
 }
