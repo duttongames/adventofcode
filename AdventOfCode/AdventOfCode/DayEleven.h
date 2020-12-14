@@ -374,8 +374,6 @@ int GetOccupiedSeatsTwo()
 				seatsOccupied++;
 			}
 		}
-
-		cout << currentLayout[i] << endl;
 	}
 
 	return seatsOccupied;

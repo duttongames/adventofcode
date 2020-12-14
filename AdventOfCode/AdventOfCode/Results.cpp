@@ -9,6 +9,7 @@
 #include "DayNine.h"
 #include "DayTen.h"
 #include "DayEleven.h"
+#include "DayTwelve.h"
 
 int main()
 {
@@ -58,6 +59,12 @@ int main()
 	ReadSeats();
 
 	cout << "The Total Number of Occupied Seats based on the second set of rules is: " + to_string(GetOccupiedSeatsTwo()) << endl;
+
+	ReadCommands();
+
+	cout << "The Manhattan Distance from the ship's starting position is: " + to_string(GetManhattanDistance()) << endl;
+
+	cout << "The Manhattan Distance from the ship's starting position following the second method is: " + to_string(GetManhattanDistanceTwo()) << endl;
 
 	return 0;
 }
