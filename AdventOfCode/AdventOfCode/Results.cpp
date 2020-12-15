@@ -10,6 +10,7 @@
 #include "DayTen.h"
 #include "DayEleven.h"
 #include "DayTwelve.h"
+#include "DayThirteen.h"
 
 int main()
 {
@@ -65,6 +66,14 @@ int main()
 	cout << "The Manhattan Distance from the ship's starting position is: " + to_string(GetManhattanDistance()) << endl;
 
 	cout << "The Manhattan Distance from the ship's starting position following the second method is: " + to_string(GetManhattanDistanceTwo()) << endl;
+
+	ReadBusNotes(0);
+
+	cout << "The earliest bus ID multiplied by the number of minutes to wait is: " + to_string(GetEarliestBus()) << endl;
+
+	ReadBusNotes(1);
+
+	cout << "The earliest timestamp where all buses depart subsequently after each other is: " + to_string(GetEarliestDeparture()) << endl;
 
 	return 0;
 }

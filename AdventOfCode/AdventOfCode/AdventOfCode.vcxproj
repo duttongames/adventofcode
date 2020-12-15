@@ -148,6 +148,7 @@
     <ClInclude Include="DaySeven.h" />
     <ClInclude Include="DaySix.h" />
     <ClInclude Include="DayTen.h" />
+    <ClInclude Include="DayThirteen.h" />
     <ClInclude Include="DayThree.h" />
     <ClInclude Include="DayTwelve.h" />
     <ClInclude Include="DayTwo.h" />
