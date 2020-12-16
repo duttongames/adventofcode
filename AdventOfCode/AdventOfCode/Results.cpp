@@ -11,6 +11,7 @@
 #include "DayEleven.h"
 #include "DayTwelve.h"
 #include "DayThirteen.h"
+#include "DayFourteen.h"
 
 int main()
 {
@@ -74,6 +75,8 @@ int main()
 	ReadBusNotes(1);
 
 	cout << "The earliest timestamp where all buses depart subsequently after each other is: " + to_string(GetEarliestDeparture()) << endl;
+
+	ReadInitProgram();
 
 	return 0;
 }
