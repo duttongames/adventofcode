@@ -53,9 +53,9 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Day
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwelve.h(41,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwelve.h(122,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(40,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(83,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(83,22): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(124,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(166,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayThirteen.h(163,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Results.cpp(50,91): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(34): warning C4715: 'ExpenseFix': not all control paths return a value
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayOne.h(65): warning C4715: 'ExpenseFixTriple': not all control paths return a value

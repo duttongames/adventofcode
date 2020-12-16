@@ -81,8 +81,9 @@ long long GetTotalCombinations()
 	adapters.insert(adapters.begin(), 0);
 	adapters.push_back(adapters[adapters.size() - 1] + 3);
 
-	/*CREDIT TO GAMEPOPPER ON REDDIT FOR THIS SOLUTION*/
-	std::vector<long long> path(adapters.size(), 0);
+	/*CREDIT TO GAMEPOPPER ON REDDIT FOR THIS SOLUTION https://pastebin.com/KMJbTM9N*/
+	vector<long long> path(adapters.size(), 0);
+
 	path[path.size() - 1] = 1;
 	for (int i = path.size() - 1; i >= 0; i--)
 	{

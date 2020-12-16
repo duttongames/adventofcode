@@ -66,51 +66,51 @@ void ReadBusNotes(int method)
 
 	else
 	{
-		//Get the input from the txt file.
-		while (getline(busNotes, line))
+	//Get the input from the txt file.
+	while (getline(busNotes, line))
+	{
+		//Get the earliest timestamp I can depart.
+		if (lineCounter == 0)
 		{
-			//Get the earliest timestamp I can depart.
-			if (lineCounter == 0)
-			{
-				earliestTimestamp = stoi(line);
-			}
+			earliestTimestamp = stoi(line);
+		}
 
-			//Get the ID's of all buses.
-			else
-			{
-				string busID = "";
+		//Get the ID's of all buses.
+		else
+		{
+			string busID = "";
 
-				for (int i = 0; i < line.size(); i++)
+			for (int i = 0; i < line.size(); i++)
+			{
+				if (line[i] == ',' || i == line.size() - 1)
 				{
-					if (line[i] == ',' || i == line.size() - 1)
-					{
-						if (i == line.size() - 1)
-						{
-							busID += line[i];
-						}
-
-						if (busID.size() > 0)
-						{
-							//Push x's as 1 since they have no time constraints.
-							if (busID == "x")
-							{
-								busID = "1";
-							}
-
-							availableBuses.push_back(stoi(busID));
-							busID = "";
-						}
-					}
-
-					else
+					if (i == line.size() - 1)
 					{
 						busID += line[i];
 					}
+
+					if (busID.size() > 0)
+					{
+						//Push x's as 1 since they have no time constraints.
+						if (busID == "x")
+						{
+							busID = "1";
+						}
+
+						availableBuses.push_back(stoi(busID));
+						busID = "";
+					}
+				}
+
+				else
+				{
+					busID += line[i];
 				}
 			}
-
-			lineCounter++;
 		}
+
+		lineCounter++;
+	}
 	}
 }
 
@@ -156,40 +156,24 @@ long long lcm(int a, int b)
 long long GetEarliestDeparture()
 {
 	long long earliestDeparture = 0;
-	long long currentTimestamp = availableBuses[0];
-	long long incrementAmount = availableBuses[0];
-	int subsequentBuses = 1;
+	long long currentTimestamp = 0;
+	long long incrementAmount = 1;
 
-	while (earliestDeparture == 0)
+	//CREDIT GOES TO JOSHBDUNCAN FOR THIS SOLUTION https://gist.github.com/joshbduncan/65f810fe821c7a3ea81a1f5a444ea81e
+
+	//Loop through each of the buses in the list.
+	for (int i = 0; i < availableBuses.size(); i++)
 	{
-		//Loop through each of the buses and check that they depart at the same time as the timestamp + their position in the list.
-		for (int i = subsequentBuses; i < availableBuses.size(); i++)
+		//Increase the timestamp by the increment amount while the bus does not evenly divide by the current timestamp plus the offset.
+		while ((currentTimestamp + i) % availableBuses[i] != 0)
 		{
-			if ((currentTimestamp + i) % availableBuses[i] == 0)
-			{
-				if (i > subsequentBuses)
-				{
-					incrementAmount = currentTimestamp + lcm(availableBuses[i - 1], availableBuses[i]);
-					subsequentBuses++;
-					cout << "Buses: " + to_string(subsequentBuses) << endl;
-					cout << incrementAmount << endl;
-				}
-			}
-
-			else
-			{
-				break;
-			}
+			currentTimestamp += incrementAmount;
 		}
 
-		//End the loop as the earliest timestamp has been found.
-		if (subsequentBuses == availableBuses.size() - 1)
-		{
-			earliestDeparture = currentTimestamp;
-		}
-
-		currentTimestamp += incrementAmount;
+		//Increase the increment amount.
+		incrementAmount *= availableBuses[i];
 	}
 
+	earliestDeparture = currentTimestamp;
 	return earliestDeparture;
 }
