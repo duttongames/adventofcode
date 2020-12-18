@@ -9,8 +9,29 @@
 vector<string> masks;
 vector<vector<string>> valuesToWrite;
 vector<vector<int>> memoryAddresses;
+map<string, string> memoryAddressesTwo;
+bool flip = false;
+int test = 0;
 
 using namespace std;
+
+void GetAllAddresses(vector<string> &addresses, string currentAddress)
+{
+	size_t currentPosition = currentAddress.find('X');
+
+	if (currentAddress.find('X') == string::npos)
+	{
+		addresses.push_back(currentAddress);
+	}
+
+	else
+	{
+		currentAddress[currentPosition] = '0';
+		GetAllAddresses(addresses, currentAddress);
+		currentAddress[currentPosition] = '1';
+		GetAllAddresses(addresses, currentAddress);
+	}
+}
 
 void ReadInitProgram()
 {
@@ -78,14 +99,18 @@ void ReadInitProgram()
 	memoryAddresses.push_back(currentMemoryAddresses);
 
 	long long total = 0;
+	long long totalTwo = 0;
 	vector<int> usedAddresses;
 	vector<long long> valuesAdded;
+	bool first = true;
 
 	for (int i = 0; i < masks.size(); i++)
 	{
 		for (int j = 0; j < valuesToWrite[i].size(); j++)
 		{
 			string result = "000000000000000000000000000000000000";
+			string oldResult = "000000000000000000000000000000000000";
+			vector<string> results;
 
 			for (int k = 0; k < masks[i].size(); k++)
 			{
@@ -98,6 +123,8 @@ void ReadInitProgram()
 				{
 					result[k] = masks[i][k];
 				}
+
+				oldResult[k] = valuesToWrite[i][j][k];
 			}
 
 			bool addNewAddress = true;
@@ -120,8 +147,51 @@ void ReadInitProgram()
 			}
 
 			total += bitset<36>(result).to_ullong();
+
+			//Version 2 Decoder Chip
+			int xCount = 0;
+			string startingAddress = bitset<36>(memoryAddresses[i][j]).to_string();
+
+			for (int m = 0; m < masks[i].size(); m++)
+			{
+				if (masks[i][m] == 'X')
+				{
+					startingAddress[m] = 'X';
+					xCount++;
+				}
+
+				if (masks[i][m] == '1')
+				{
+					startingAddress[m] = '1';
+				}
+			}
+
+			GetAllAddresses(results, startingAddress);
+
+			for (int m = 0; m < results.size(); m++)
+			{
+				if (memoryAddressesTwo.find(to_string(bitset<36>(results[m]).to_ullong())) != memoryAddressesTwo.end())
+				{
+					memoryAddressesTwo[to_string(bitset<36>(results[m]).to_ullong())] = oldResult;
+				}
+
+				else
+				{
+					memoryAddressesTwo.insert(pair<string, string>(to_string(bitset<36>(results[m]).to_ullong()), oldResult));
+				}
+			}
+
+			test++;
 		}
 	}
 
+	map<string, string>::iterator it;
+
+	for (it = memoryAddressesTwo.begin(); it != memoryAddressesTwo.end(); it++)
+	{
+		totalTwo += bitset<36>(it->second).to_ullong();
+	}
+
 	cout << total << endl;
+	cout << totalTwo << endl;
 }
