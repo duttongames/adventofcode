@@ -12,6 +12,7 @@
 #include "DayTwelve.h"
 #include "DayThirteen.h"
 #include "DayFourteen.h"
+#include "DayFifteen.h"
 
 int main()
 {
@@ -77,6 +78,9 @@ int main()
 	cout << "The earliest timestamp where all buses depart subsequently after each other is: " + to_string(GetEarliestDeparture()) << endl;
 
 	ReadInitProgram();
+
+	cout << "The 2020th number is: " +  to_string(GetLastNumber(2020)) << endl;
+	cout << "The 30000000th number is: " + to_string(GetLastNumber(30000000)) << endl;
 
 	return 0;
 }

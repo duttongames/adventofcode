@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="DayEight.h" />
     <ClInclude Include="DayEleven.h" />
+    <ClInclude Include="DayFifteen.h" />
     <ClInclude Include="DayFive.h" />
     <ClInclude Include="DayFour.h" />
     <ClInclude Include="DayFourteen.h" />

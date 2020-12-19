@@ -192,6 +192,6 @@ void ReadInitProgram()
 		totalTwo += bitset<36>(it->second).to_ullong();
 	}
 
-	cout << total << endl;
-	cout << totalTwo << endl;
+	cout << "The sum of all values in memory following the first method is: " + to_string(total) << endl;
+	cout << "The sum of all values in memory following the second method is: " + to_string(totalTwo) << endl;
 }
