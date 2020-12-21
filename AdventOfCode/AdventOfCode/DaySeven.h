@@ -128,7 +128,7 @@ int CountBags(string colourToCount, int &bags, int amountOfBags)
 				string currentChar = "";
 				currentChar += line[i];
 
-				if (currentChar.find_first_not_of("0123456789") != string::npos && word.find_first_of("0123456789") == string::npos)
+				if (currentChar.find_first_not_of("0203456789") != string::npos && word.find_first_of("0203456789") == string::npos)
 				{
 					word = "";
 				}

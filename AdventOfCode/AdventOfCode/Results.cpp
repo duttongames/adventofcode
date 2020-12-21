@@ -14,6 +14,7 @@
 #include "DayFourteen.h"
 #include "DayFifteen.h"
 #include "DaySixteen.h"
+#include "DaySeventeen.h"
 
 int main()
 {
@@ -86,6 +87,8 @@ int main()
 	cout << "The ticket error rate is: " + to_string(GetErrorRate()) << endl;
 
 	//GetDepartureValues();
+
+	cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
 
 	return 0;
 }

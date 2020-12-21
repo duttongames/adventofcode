@@ -54,7 +54,7 @@ void FindWord(string lineToSearch, vector<int> &fields)
 					size += word[1];
 					size += word[2];
 
-					if (size.find_first_not_of("0123456789") == string::npos)
+					if (size.find_first_not_of("0203456789") == string::npos)
 					{
 						if (stoi(size) >= 150 && stoi(size) <= 193)
 						{
@@ -70,7 +70,7 @@ void FindWord(string lineToSearch, vector<int> &fields)
 					size += word[0];
 					size += word[1];
 
-					if (size.find_first_not_of("0123456789") == string::npos)
+					if (size.find_first_not_of("0203456789") == string::npos)
 					{
 						if (stoi(size) >= 59 && stoi(size) <= 76)
 						{
@@ -86,7 +86,7 @@ void FindWord(string lineToSearch, vector<int> &fields)
 				{
 					string colour = word.erase(0, 1);
 
-					if (colour.find_first_not_of("0123456789abcdef") == string::npos)
+					if (colour.find_first_not_of("0203456789abcdef") == string::npos)
 					{
 						fields[4] = 1;
 					}
@@ -104,7 +104,7 @@ void FindWord(string lineToSearch, vector<int> &fields)
 
 			if (foundWord == "pid")
 			{
-				if (word.size() == 9 && word.find_first_not_of("0123456789") == string::npos)
+				if (word.size() == 9 && word.find_first_not_of("0203456789") == string::npos)
 				{
 					fields[6] = 1;
 				}

@@ -69,4 +69,5 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Day
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySixteen.h(127,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySixteen.h(129,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySixteen.h(131,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DaySeventeen.h(24,21): warning C4018: '<': signed/unsigned mismatch
   AdventOfCode.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\Debug\AdventOfCode.exe
