@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DayEight.h" />
+    <ClInclude Include="DayEighteen.h" />
     <ClInclude Include="DayEleven.h" />
     <ClInclude Include="DayFifteen.h" />
     <ClInclude Include="DayFive.h" />

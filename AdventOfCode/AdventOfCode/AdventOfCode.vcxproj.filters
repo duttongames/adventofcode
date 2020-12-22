@@ -66,6 +66,9 @@
     <ClInclude Include="DaySeventeen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DayEighteen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Results.cpp">

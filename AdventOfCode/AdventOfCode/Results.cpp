@@ -15,6 +15,7 @@
 #include "DayFifteen.h"
 #include "DaySixteen.h"
 #include "DaySeventeen.h"
+#include "DayEighteen.h"
 
 int main()
 {
@@ -84,11 +85,13 @@ int main()
 	//cout << "The 2020th number is: " +  to_string(GetLastNumber(2020)) << endl;
 	//cout << "The 30000000th number is: " + to_string(GetLastNumber(30000000)) << endl;
 
-	cout << "The ticket error rate is: " + to_string(GetErrorRate()) << endl;
+	//cout << "The ticket error rate is: " + to_string(GetErrorRate()) << endl;
 
 	//GetDepartureValues();
 
-	cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
+	//cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
+
+	cout << "The total sum of the equations is: " + to_string(SolveHomework()) << endl;
 
 	return 0;
 }
