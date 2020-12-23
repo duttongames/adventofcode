@@ -75,4 +75,12 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Day
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayEighteen.h(33,70): warning C4018: '>': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayEighteen.h(71,10): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayEighteen.h(97,12): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayNineteen.h(26,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayNineteen.h(79,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayNineteen.h(81,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayNineteen.h(99,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(42,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(49,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(64,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(75,21): warning C4018: '<': signed/unsigned mismatch
   AdventOfCode.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\Debug\AdventOfCode.exe

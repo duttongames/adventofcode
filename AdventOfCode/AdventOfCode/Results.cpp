@@ -16,6 +16,8 @@
 #include "DaySixteen.h"
 #include "DaySeventeen.h"
 #include "DayEighteen.h"
+#include "DayNineteen.h"
+#include "DayTwentyTwo.h"
 
 int main()
 {
@@ -91,7 +93,12 @@ int main()
 
 	//cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
 
-	cout << "The total sum of the equations is: " + to_string(SolveHomework()) << endl;
+	//cout << "The total sum of the equations is: " + to_string(SolveHomework()) << endl;
+
+	//ReadRulesAndMessages();
+	//GetValidMessages("0", "");
+
+	PlayGame();
 
 	return 0;
 }
