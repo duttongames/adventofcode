@@ -98,7 +98,9 @@ int main()
 	//ReadRulesAndMessages();
 	//GetValidMessages("0", "");
 
-	PlayGame();
+	GetDecks();
+	//PlayCombat();
+	PlayRecursiveCombat(playerOneDeck, playerTwoDeck, 0);
 
 	return 0;
 }

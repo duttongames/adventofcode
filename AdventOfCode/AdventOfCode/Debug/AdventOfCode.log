@@ -81,6 +81,13 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\Day
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayNineteen.h(99,21): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(42,20): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(49,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(64,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(75,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(66,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(77,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(138,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(143,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(157,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(163,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(175,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(219,23): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\AdventOfCode\DayTwentyTwo.h(219,58): warning C4018: '>=': signed/unsigned mismatch
   AdventOfCode.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode\Debug\AdventOfCode.exe
