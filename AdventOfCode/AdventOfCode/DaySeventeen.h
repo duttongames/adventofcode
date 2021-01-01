@@ -9,6 +9,8 @@
 using namespace std;
 
 bool cubes[30][30][30];
+auto fourDimCubes = new bool[30][30][30][30]();
+bool looped = false;
 
 //Reads and inputs the initial state of the cubes.
 void GetInitialState()
@@ -26,6 +28,7 @@ void GetInitialState()
 			if (line[x] == '#')
 			{
 				cubes[x + 14][y][18] = true;
+				fourDimCubes[x + 14][y][14][14] = true;
 			}
 		}
 
@@ -44,15 +47,20 @@ void GetCurrentState()
 		{
 			for (int k = 0; k < 30; k++)
 			{
-				if (cubes[k][j][i] == true)
+				for (int l = 0; l < 30; l++)
 				{
-					cout << "#";
+					if (fourDimCubes[k][j][i][l] == true)
+					{
+						cout << "#";
+					}
+
+					else
+					{
+						cout << ".";
+					}
 				}
 
-				else
-				{
-					cout << ".";
-				}
+				cout << endl;
 			}
 
 			cout << endl;
@@ -64,18 +72,34 @@ void GetCurrentState()
 }
 
 //Checks if a cube is active. Returns 0 if not, 1 if yes.
-int CheckActive(int cubeX, int cubeY, int cubeZ)
+int CheckActive(int cubeX, int cubeY, int cubeZ, int cubeW)
 {
-	if (cubeX > 0 && cubeY > 0 && cubeZ > 0 && cubeX < 30 && cubeY < 30 && cubeZ < 30)
+	if (cubeX >= 0 && cubeY >= 0 && cubeZ >= 0 && cubeX < 30 && cubeY < 30 && cubeZ < 30)
 	{
-		if (cubes[cubeX][cubeY][cubeZ] == true)
+		if (cubeW == INT_MAX)
 		{
-			return 1;
+			if (cubes[cubeX][cubeY][cubeZ] == true)
+			{
+				return 1;
+			}
+
+			else
+			{
+				return 0;
+			}
 		}
 
-		else
+		else if (cubeW >= 0 && cubeW < 30)
 		{
-			return 0;
+			if (fourDimCubes[cubeX][cubeY][cubeZ][cubeW] == true)
+			{
+				return 1;
+			}
+
+			else
+			{
+				return 0;
+			}
 		}
 	}
 
@@ -86,39 +110,66 @@ int CheckActive(int cubeX, int cubeY, int cubeZ)
 }
 
 //Checks a single cube and returns the amount of active cubes adjacent to it.
-int CheckCube(int cubeX, int cubeY, int cubeZ)
+int CheckCube(int cubeX, int cubeY, int cubeZ, int cubeW)
 {
 	int activeAdjacentCubes = 0;
 
-	activeAdjacentCubes += CheckActive(cubeX, cubeY, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY, cubeZ + 1);
+	int loopCount = 0;
 
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY - 1, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY + 1, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY - 1, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY + 1, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY + 1, cubeZ - 1);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY - 1, cubeZ - 1);
+	if (cubeW != INT_MAX)
+	{
+		for (int i = cubeX - 1; i < cubeX + 2; i++)
+		{
+			for (int j = cubeY - 1; j < cubeY + 2; j++)
+			{
+				for (int k = cubeZ - 1; k < cubeZ + 2; k++)
+				{
+					for (int l = cubeW - 1; l < cubeW + 2; l++)
+					{
+						if (i == cubeX && j == cubeY && k == cubeZ && l == cubeW)
+						{
 
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY - 1, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY + 1, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY - 1, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY + 1, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY + 1, cubeZ);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY - 1, cubeZ);
+						}
 
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY - 1, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX - 1, cubeY + 1, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY - 1, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX + 1, cubeY + 1, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY + 1, cubeZ + 1);
-	activeAdjacentCubes += CheckActive(cubeX, cubeY - 1, cubeZ + 1);
+						else
+						{
+							activeAdjacentCubes += CheckActive(i, j, k, l);
+							loopCount++;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	else
+	{
+		for (int i = cubeX - 1; i < cubeX + 2; i++)
+		{
+			for (int j = cubeY - 1; j < cubeY + 2; j++)
+			{
+				for (int k = cubeZ - 1; k < cubeZ + 2; k++)
+				{
+					if (i == cubeX && j == cubeY && k == cubeZ)
+					{
+
+					}
+
+					else
+					{
+						activeAdjacentCubes += CheckActive(i, j, k, INT_MAX);
+						loopCount++;
+					}
+				}
+			}
+		}
+	}
+
+	if (looped == false)
+	{
+		cout << to_string(loopCount) << endl;
+		looped = true;
+	}
 
 	return activeAdjacentCubes;
 }
@@ -129,7 +180,7 @@ int Cycle()
 	GetInitialState();
 
 	int activeCubes = 0;
-	int cubesCopy[30][30][30];
+	auto fourDimCubesCopy = new bool[30][30][30][30]();
 
 	for (int i = 0; i < 30; i++)
 	{
@@ -137,7 +188,10 @@ int Cycle()
 		{
 			for (int k = 0; k < 30; k++)
 			{
-				cubesCopy[i][j][k] = cubes[i][j][k];
+				for (int w = 0; w < 30; w++)
+				{
+					fourDimCubesCopy[i][j][k][w] = fourDimCubes[i][j][k][w];
+				}
 			}
 		}
 	}
@@ -151,21 +205,24 @@ int Cycle()
 			{
 				for (int k = 0; k < 30; k++)
 				{
-					int adjacentCubes = CheckCube(i, j, k);
-
-					if (cubes[i][j][k] == true)
+					for (int w = 0; w < 30; w++)
 					{
-						if (adjacentCubes < 2 || adjacentCubes > 3)
+						int adjacentCubes = CheckCube(i, j, k, w);
+
+						if (fourDimCubes[i][j][k][w] == true)
 						{
-							cubesCopy[i][j][k] = false;
+							if (adjacentCubes < 2 || adjacentCubes > 3)
+							{
+								fourDimCubesCopy[i][j][k][w] = false;
+							}
 						}
-					}
 
-					else
-					{
-						if (adjacentCubes == 3)
+						else
 						{
-							cubesCopy[i][j][k] = true;
+							if (adjacentCubes == 3)
+							{
+								fourDimCubesCopy[i][j][k][w] = true;
+							}
 						}
 					}
 				}
@@ -178,12 +235,13 @@ int Cycle()
 			{
 				for (int k = 0; k < 30; k++)
 				{
-					cubes[i][j][k] = cubesCopy[i][j][k];
+					for (int w = 0; w < 30; w++)
+					{
+						fourDimCubes[i][j][k][w] = fourDimCubesCopy[i][j][k][w];
+					}
 				}
 			}
 		}
-
-		//GetCurrentState();
 	}
 
 	//Count the amount of active cubes.
@@ -193,9 +251,12 @@ int Cycle()
 		{
 			for (int k = 0; k < 30; k++)
 			{
-				if (cubes[i][j][k] == true)
+				for (int w = 0; w < 30; w++)
 				{
-					activeCubes++;
+					if (fourDimCubes[i][j][k][w] == true)
+					{
+						activeCubes++;
+					}
 				}
 			}
 		}

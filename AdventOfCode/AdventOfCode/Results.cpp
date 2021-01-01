@@ -91,16 +91,16 @@ int main()
 
 	//GetDepartureValues();
 
-	//cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
+	cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
 
 	//cout << "The total sum of the equations is: " + to_string(SolveHomework()) << endl;
 
 	//ReadRulesAndMessages();
 	//GetValidMessages("0", "");
 
-	GetDecks();
+	//GetDecks();
 	//PlayCombat();
-	PlayRecursiveCombat(playerOneDeck, playerTwoDeck, 0);
+	//PlayRecursiveCombat(playerOneDeck, playerTwoDeck, 0);
 
 	return 0;
 }
