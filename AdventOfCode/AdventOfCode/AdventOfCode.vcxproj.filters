@@ -75,6 +75,9 @@
     <ClInclude Include="DayTwentyTwo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DayTwentyThree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Results.cpp">

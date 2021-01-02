@@ -18,6 +18,7 @@
 #include "DayEighteen.h"
 #include "DayNineteen.h"
 #include "DayTwentyTwo.h"
+#include "DayTwentyThree.h"
 
 int main()
 {
@@ -91,7 +92,7 @@ int main()
 
 	//GetDepartureValues();
 
-	cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
+	//cout << "The amount of active cubes after six cycles is: " + to_string(Cycle());
 
 	//cout << "The total sum of the equations is: " + to_string(SolveHomework()) << endl;
 
@@ -101,6 +102,8 @@ int main()
 	//GetDecks();
 	//PlayCombat();
 	//PlayRecursiveCombat(playerOneDeck, playerTwoDeck, 0);
+
+	cout << "The final formation of the cup labels is: " + SimulateMoves(100) << endl;
 
 	return 0;
 }
