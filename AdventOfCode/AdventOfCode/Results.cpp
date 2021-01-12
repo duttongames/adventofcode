@@ -88,7 +88,8 @@ int main()
 	//cout << "The 2020th number is: " +  to_string(GetLastNumber(2020)) << endl;
 	//cout << "The 30000000th number is: " + to_string(GetLastNumber(30000000)) << endl;
 
-	//cout << "The ticket error rate is: " + to_string(GetErrorRate()) << endl;
+	cout << "The ticket error rate is: " + to_string(GetErrorRate()) << endl;
+	cout << "The departure score is: " + to_string(GetDepartureValues()) << endl;
 
 	//GetDepartureValues();
 
@@ -103,7 +104,7 @@ int main()
 	//PlayCombat();
 	//PlayRecursiveCombat(playerOneDeck, playerTwoDeck, 0);
 
-	cout << "The final formation of the cup labels is: " + SimulateMoves(100) << endl;
+	//cout << "The final formation of the cup labels is: " + SimulateMoves(100) << endl;
 
 	return 0;
 }

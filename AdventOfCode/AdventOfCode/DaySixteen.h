@@ -8,8 +8,9 @@
 
 vector<int> minValues;
 vector<int> maxValues;
-vector<int> ticketValues;
-vector<vector<int>> valuesByRow;
+vector<vector<int>> ticketValues;
+vector<vector<int>> errorFreeValues;
+vector<int> yourTicket;
 
 int valuesOnLine = 0;
 
@@ -25,12 +26,16 @@ void ReadTickets()
 
 	bool minValue = true;
 	bool readLine = true;
+	bool readMyTicket = false;
 	bool readValue = false;
 	bool nearbyTickets = false;
+	int lineCounter = 0;
 
 	//Get the input from the txt file.
 	while (getline(tickets, line))
 	{
+		vector<int> emptyTicket;
+
 		if (line == "your ticket:")
 		{
 			readLine = false;
@@ -43,7 +48,28 @@ void ReadTickets()
 
 			for (int i = 0; i < line.size(); i++)
 			{
-				if (isdigit(line[i]))
+				if (readMyTicket)
+				{
+					if (line[i] == ',')
+					{
+						yourTicket.push_back(stoi(currentValue));
+						currentValue = "";
+					}
+
+					else
+					{
+						currentValue += line[i];
+					}
+
+					if (i == line.size() - 1)
+					{
+						yourTicket.push_back(stoi(currentValue));
+						currentValue = "";
+						readMyTicket = false;
+					}
+				}
+
+				else if (isdigit(line[i]))
 				{
 					readValue = true;
 				}
@@ -56,7 +82,7 @@ void ReadTickets()
 					{
 						if (nearbyTickets)
 						{
-							ticketValues.push_back(stoi(currentValue));
+							emptyTicket.push_back(stoi(currentValue));
 							valuesOnLine++;
 						}
 
@@ -82,11 +108,24 @@ void ReadTickets()
 			}
 		}
 
+		if (line == "your ticket:")
+		{
+			readMyTicket = true;
+			readLine = true;
+		}
+
 		if (line == "nearby tickets:")
 		{
 			readLine = true;
 			nearbyTickets = true;
 		}
+
+		if (emptyTicket.size() > 0)
+		{
+			ticketValues.push_back(emptyTicket);
+		}
+
+		lineCounter++;
 	}
 }
 
@@ -94,64 +133,147 @@ void ReadTickets()
 int GetErrorRate()
 {
 	int errorRate = 0;
+	int columnCounter = 0;
+	vector<int> invalidTickets;
 
 	ReadTickets();
 
-	for (int i = 0; i < ticketValues.size(); i++)
+	while (columnCounter < ticketValues[0].size())
 	{
-		for (int j = 0; j < minValues.size(); j++)
+		for (int i = 0; i < ticketValues.size(); i++)
 		{
-			if (ticketValues[i] >= minValues[j] && ticketValues[i] <= maxValues[j])
+			for (int j = 0; j < minValues.size(); j += 2)
 			{
-				break;
+				if (ticketValues[i][columnCounter] >= minValues[j] && ticketValues[i][columnCounter] <= maxValues[j])
+				{
+					break;
+				}
+
+				if (ticketValues[i][columnCounter] >= minValues[j + 1] && ticketValues[i][columnCounter] <= maxValues[j + 1])
+				{
+					break;
+				}
+
+				if (j >= minValues.size() - 2)
+				{
+					errorRate += ticketValues[i][columnCounter];
+					invalidTickets.push_back(i);
+				}
 			}
 
-			if (j == minValues.size() - 1)
+			if (columnCounter == ticketValues[0].size() - 1 && find(invalidTickets.begin(), invalidTickets.end(), i) == invalidTickets.end())
 			{
-				errorRate += ticketValues[i];
-				ticketValues.erase(ticketValues.begin() + i);
+				errorFreeValues.push_back(ticketValues[i]);
 			}
 		}
+
+		columnCounter++;
 	}
 
 	return errorRate;
 }
 
 //Works out which field is which and returns the Departure field values multiplied together.
-int GetDepartureValues()
+long long GetDepartureValues()
 {
-	int correctValues[3] = { 0 };
+	int columnCounter = 0;
+	int minCounter = 0;
+	map<int, vector<int>> possibleTicketFields;
 
-	int multiple = 0;
-
-	for (int k = 0; k < ticketValues.size() / valuesOnLine; k++)
+	while (columnCounter < errorFreeValues[0].size())
 	{
-		for (int i = k; i < ticketValues.size(); i += valuesOnLine)
+		vector<int> validTickets;
+
+		for (int i = 0; i < minValues.size() / 2; i++)
+		{
+			validTickets.push_back(0);
+		}
+
+		for (int i = 0; i < errorFreeValues.size(); i++)
 		{
 			for (int j = 0; j < minValues.size(); j += 2)
 			{
-				if (ticketValues[i] >= minValues[j] && ticketValues[i] <= maxValues[j])
+				if (errorFreeValues[i][columnCounter] >= minValues[j] && errorFreeValues[i][columnCounter] <= maxValues[j])
 				{
-					correctValues[((j + 2) / 2) - 1]++;
+					if (j == 0)
+					{
+						validTickets[j]++;
+					}
+
+					else
+					{
+						validTickets[j / 2]++;
+					}
 				}
 
-				else if (ticketValues[i] >= minValues[j + 1] && ticketValues[i] <= maxValues[j + 1])
+				else if (errorFreeValues[i][columnCounter] >= minValues[j + 1] && errorFreeValues[i][columnCounter] <= maxValues[j + 1])
 				{
-					correctValues[((j + 2) / 2) - 1]++;
+					if (j == 0)
+					{
+						validTickets[j]++;
+					}
+
+					else
+					{
+						validTickets[j / 2]++;
+					}
+				}
+			}
+		}
+
+		for (int i = 0; i < validTickets.size(); i++)
+		{
+			possibleTicketFields[i].push_back(validTickets[i]);
+		}
+
+		columnCounter++;
+	}
+
+	int currentCount = 1;
+	map<int, int> foundFields;
+
+	for (int i = 0; i < possibleTicketFields.size(); i++)
+	{
+		foundFields[i] = -1;
+	}
+
+	while (currentCount < possibleTicketFields.size() + 1)
+	{
+		for (int i = 0; i < possibleTicketFields.size(); i++)
+		{
+			int possibleField = -1;
+			int maxCount = 0;
+
+			for (int j = 0; j < possibleTicketFields[i].size(); j++)
+			{
+				if (possibleTicketFields[i][j] == (possibleTicketFields.size() - 1) * 10)
+				{
+					if (possibleField == -1 && foundFields[j] == -1)
+					{
+						possibleField = j;
+					}
+
+					maxCount++;
 				}
 			}
 
-			multiple++;
-		}
-
-		cout << "New Column: " << endl;
-
-		for (int l = 0; l < valuesOnLine; l++)
-		{
-			cout << correctValues[l] << endl;
-			correctValues[l] = 0;
+			if (maxCount == currentCount)
+			{
+				foundFields[possibleField] = i;
+				currentCount++;
+			}
 		}
 	}
 
-	return 0;
+	long long departureValue = 1;
+
+	for (int i = 0; i < foundFields.size(); i++)
+	{
+		if (foundFields[i] < 6)
+		{
+			departureValue *= yourTicket[i];
+		}
+	}
+
+	return departureValue;
 }
