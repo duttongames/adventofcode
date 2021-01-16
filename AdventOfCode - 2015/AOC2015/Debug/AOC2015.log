@@ -1,0 +1,8 @@
+﻿  AOC2015.cpp
+C:\Users\Georg\source\repos\AOC2015\AOC2015\AOC2015.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Georg\source\repos\AOC2015\AOC2015\DayOne.h(19,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\source\repos\AOC2015\AOC2015\AOC2015.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Georg\source\repos\AOC2015\AOC2015\DayTwo.h(27,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\source\repos\AOC2015\AOC2015\AOC2015.cpp(8,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Georg\source\repos\AOC2015\AOC2015\DayThree.h(36,21): warning C4018: '<': signed/unsigned mismatch
+  AOC2015.vcxproj -> C:\Users\Georg\source\repos\AOC2015\Debug\AOC2015.exe
