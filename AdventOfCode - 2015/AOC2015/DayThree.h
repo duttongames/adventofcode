@@ -29,7 +29,7 @@ int GetDeliveredHouses()
 
 	bool moveRobo = false;
 
-	//Loop through each line/present.
+	//Loop through each line.
 	while (getline(directionsFile, line))
 	{
 		//Loop through each character on the line.
