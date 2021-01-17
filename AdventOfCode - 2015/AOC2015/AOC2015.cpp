@@ -6,7 +6,9 @@
 #include "DayOne.h";
 #include "DayTwo.h";
 #include "DayThree.h";
+#include "DayFour.h"
 #include "DayFive.h";
+#include "DaySix.h";
 
 int main()
 {
@@ -19,7 +21,13 @@ int main()
     //Day Three Answers
     cout << "The total amount of houses delivered to is: " + to_string(GetDeliveredHouses()) << endl;
 
+    //Day Four Answers
+
     //Day Five Answers
     cout << "The amount of nice strings in the list is: " + to_string(GetNiceStrings(1)) << endl;
     cout << "The amount of nice strings in the list is: " + to_string(GetNiceStrings(2)) << endl;
+
+    //Day Six Answers
+    cout << "The amount of lights that are lit is: " + to_string(GetLitLights(1)) << endl;
+    cout << "The amount of lights that are lit is: " + to_string(GetLitLights(2)) << endl;
 }

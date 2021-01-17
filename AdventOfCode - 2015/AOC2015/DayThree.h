@@ -121,5 +121,6 @@ int GetDeliveredHouses()
 		}
 	}
 
+	directionsFile.close();
 	return totalHousesDeliveredTo;
 }

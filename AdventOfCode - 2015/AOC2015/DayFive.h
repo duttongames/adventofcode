@@ -130,5 +130,6 @@ int GetNiceStrings(int method)
 		}
 	}
 
+	stringFile.close();
 	return niceStrings;
 }

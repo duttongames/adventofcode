@@ -114,5 +114,6 @@ long GetFeetNeeded()
 
 	cout << to_string(totalRibbonFeet) + " feet of ribbon is needed for these presents." << endl;
 
+	dimensionsFile.close();
 	return totalFeet;
 }
