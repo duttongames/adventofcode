@@ -176,5 +176,6 @@ int GetLitLights(int method)
 		}
 	}
 
+	instructionsFile.close();
 	return litLights;
 }

@@ -9,6 +9,8 @@
 #include "DayFour.h"
 #include "DayFive.h";
 #include "DaySix.h";
+#include "DaySeven.h";
+#include "DayTwelve.h";
 
 int main()
 {
@@ -30,4 +32,10 @@ int main()
     //Day Six Answers
     cout << "The amount of lights that are lit is: " + to_string(GetLitLights(1)) << endl;
     cout << "The amount of lights that are lit is: " + to_string(GetLitLights(2)) << endl;
+
+    //Day Seven Answers
+    cout << "The signal provided to wire 'a' is: " + to_string(AssembleCircuit()) << endl;
+
+    //Day Twelve Answers
+    cout << "The total of all the numbers in the document is: " + to_string(CountNumbers()) << endl;
 }
