@@ -10,6 +10,7 @@
 #include "DayFive.h";
 #include "DaySix.h";
 #include "DaySeven.h";
+#include "DayEight.h";
 #include "DayTwelve.h";
 
 int main()
@@ -36,6 +37,9 @@ int main()
 
     //Day Seven Answers
     cout << "The signal provided to wire 'a' is: " + to_string(AssembleCircuit()) << endl;
+
+    //Day Eight Answers
+    cout << "The number of string literal characters minus the number of characters in memory is: " + to_string(GetNumberOfCharacters()) << endl;
 
     //Day Twelve Answers
     cout << "The total of all the numbers in the document is: " + to_string(CountNumbers()) << endl;

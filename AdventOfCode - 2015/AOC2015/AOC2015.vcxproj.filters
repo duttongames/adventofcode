@@ -56,5 +56,8 @@
     <ClInclude Include="hash.h">
       <Filter>Header Files\libs</Filter>
     </ClInclude>
+    <ClInclude Include="DayEight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
