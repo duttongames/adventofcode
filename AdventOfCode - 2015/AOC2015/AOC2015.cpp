@@ -24,6 +24,7 @@ int main()
     cout << "The total amount of houses delivered to is: " + to_string(GetDeliveredHouses()) << endl;
 
     //Day Four Answers
+    //cout << "The lowest possible number for a MD5 hash that starts with six zeroes is: " + to_string(FindSuitableHash(2)) << endl;
 
     //Day Five Answers
     cout << "The amount of nice strings in the list is: " + to_string(GetNiceStrings(1)) << endl;

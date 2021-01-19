@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AOC2015.cpp" />
+    <ClCompile Include="md5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DayFive.h" />
@@ -150,6 +151,8 @@
     <ClInclude Include="DayThree.h" />
     <ClInclude Include="DayTwelve.h" />
     <ClInclude Include="DayTwo.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="md5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
