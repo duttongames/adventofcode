@@ -35,5 +35,7 @@ long CountNumbers()
 		}
 	}
 
+	jsonFile.close();
+
 	return total;
 }

@@ -12,6 +12,7 @@
 #include "DaySeven.h";
 #include "DayEight.h";
 #include "DayTwelve.h";
+#include "DayFourteen.h";
 
 int main()
 {
@@ -43,4 +44,8 @@ int main()
 
     //Day Twelve Answers
     cout << "The total of all the numbers in the document is: " + to_string(CountNumbers()) << endl;
+
+    //Day Fourteen Answers
+    cout << "The distance the fastest reindeer has travelled after 2503 seconds is: " + to_string(GetFastestReindeer(0)) << endl;
+    cout << "The winning reindeer has the following points: " + to_string(GetFastestReindeer(1)) << endl;
 }
