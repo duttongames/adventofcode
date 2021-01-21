@@ -1,0 +1,7 @@
+﻿  AOC2018.cpp
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\DayTwo.h(29,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\DayTwo.h(73,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\DayTwo.h(75,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\DayTwo.h(79,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\DayTwo.h(95): warning C4715: 'GetCommonLetters': not all control paths return a value
+  AOC2018.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2018\AOC2018\Debug\AOC2018.exe
