@@ -1,0 +1,4 @@
+﻿  AOC2016.cpp
+C:\Users\Georg\source\repos\AOC2016\AOC2016\DayOne.h(70,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\source\repos\AOC2016\AOC2016\DayTwo.h(35,21): warning C4018: '<': signed/unsigned mismatch
+  AOC2016.vcxproj -> C:\Users\Georg\source\repos\AOC2016\Debug\AOC2016.exe
