@@ -1,10 +1,11 @@
 #include <iostream>
 
-
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayThree.h"
 #include "DayFour.h"
+#include "DayFive.h"
+#include "DaySix.h"
 
 using namespace std;
 
@@ -24,4 +25,12 @@ int main()
     //Day Four Answers
     cout << "The sum of all the valid sector ID's is: " + to_string(GetValidRooms()) << endl;
     cout << "The sector ID of the North Pole Object Storage room is: " + to_string(DecryptRooms("northpole object storage")) << endl;
+
+    //Day Five Answers
+    //cout << "The Password for the first door is: " + GetDoorPassword(1) << endl;
+    //cout << "The Password for the second door is: " + GetDoorPassword(2) << endl;
+
+    //Day Six Answers
+    cout << "The error corrected message using the first method is: " + ErrorCorrectMessage(1) << endl;
+    cout << "The error corrected message using the second method is: " + ErrorCorrectMessage(2) << endl;
 }

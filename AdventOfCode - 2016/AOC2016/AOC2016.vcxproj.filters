@@ -13,10 +13,16 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\libs">
+      <UniqueIdentifier>{c4108b92-9b54-4f09-b7ca-c22af6d2b790}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AOC2016.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Header Files\libs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +36,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DayFour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DayFive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Header Files\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Header Files\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="DaySix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
