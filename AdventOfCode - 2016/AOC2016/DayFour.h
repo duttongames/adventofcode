@@ -123,6 +123,7 @@ int GetValidRooms()
 		}
 	}
 
+	roomFile.close();
 	return sectorSum;
 }
 

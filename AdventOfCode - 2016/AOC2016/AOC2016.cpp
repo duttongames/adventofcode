@@ -6,6 +6,7 @@
 #include "DayFour.h"
 #include "DayFive.h"
 #include "DaySix.h"
+#include "DaySeven.h"
 
 using namespace std;
 
@@ -33,4 +34,8 @@ int main()
     //Day Six Answers
     cout << "The error corrected message using the first method is: " + ErrorCorrectMessage(1) << endl;
     cout << "The error corrected message using the second method is: " + ErrorCorrectMessage(2) << endl;
+
+    //Day Seven Answers
+    cout << "The number of IP's that support TLS is: " + to_string(GetTLSIPs()) << endl;
+    cout << "The number of IP's that support SSL is: " + to_string(GetSSLIPs()) << endl;
 }

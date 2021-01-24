@@ -125,5 +125,6 @@ int GetPossibleTriangles(int method)
 		}
 	}
 
+	triangleFile.close();
 	return possibleTriangles;
 }

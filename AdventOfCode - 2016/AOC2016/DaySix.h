@@ -66,5 +66,6 @@ string ErrorCorrectMessage(int method)
 		errorCorrectedMessage += mostCommonChar;
 	}
 
+	messageFile.close();
 	return errorCorrectedMessage;
 }
