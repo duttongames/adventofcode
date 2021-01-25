@@ -7,6 +7,7 @@
 #include "DayFive.h"
 #include "DaySix.h"
 #include "DaySeven.h"
+#include "DayEight.h"
 
 using namespace std;
 
@@ -38,4 +39,7 @@ int main()
     //Day Seven Answers
     cout << "The number of IP's that support TLS is: " + to_string(GetTLSIPs()) << endl;
     cout << "The number of IP's that support SSL is: " + to_string(GetSSLIPs()) << endl;
+
+    //Day Eight Answers
+    cout << "The number of pixels that should be on the screen is: " + to_string(GetPixels()) << endl;
 }
