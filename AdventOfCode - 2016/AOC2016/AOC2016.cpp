@@ -8,6 +8,7 @@
 #include "DaySix.h"
 #include "DaySeven.h"
 #include "DayEight.h"
+#include "DayNine.h"
 
 using namespace std;
 
@@ -42,4 +43,7 @@ int main()
 
     //Day Eight Answers
     cout << "The number of pixels that should be on the screen is: " + to_string(GetPixels()) << endl;
+
+    //Day Nine Answers
+    cout << "The decompressed length of the file is: " + to_string(DecompressFile().size()) << endl;
 }
