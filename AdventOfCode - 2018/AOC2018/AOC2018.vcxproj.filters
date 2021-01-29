@@ -26,5 +26,8 @@
     <ClInclude Include="DayTwo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DayThree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

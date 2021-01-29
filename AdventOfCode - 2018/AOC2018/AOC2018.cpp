@@ -3,15 +3,20 @@
 
 #include "DayOne.h"
 #include "DayTwo.h"
+#include "DayThree.h"
 
 using namespace std;
 
 int main()
 {
-    //Day One Answers.
+    //Day One Answers
     cout << "The resulting frequency is: " + to_string(GetFinalFrequency()) << endl;
 
-    //Day Two Answers.
+    //Day Two Answers
     cout << "The box checksum is: " + to_string(GetBoxChecksum()) << endl;
     cout << "The common letters of the two correct Box ID's are: " + GetCommonLetters() << endl;
+
+    //Day Three Answers
+    cout << "The square inches of conflicting claims is: " + to_string(GetSquareInches(1)) << endl;
+    cout << "The claim ID that does not conflict with any other claims is: " + to_string(GetSquareInches(2)) << endl;
 }
