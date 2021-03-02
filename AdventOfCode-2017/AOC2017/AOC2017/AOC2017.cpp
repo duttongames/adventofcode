@@ -3,6 +3,7 @@
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayFour.h"
+#include "DayFive.h"
 
 int main()
 {
@@ -19,4 +20,8 @@ int main()
     //Day Four Answers
     cout << "The amount of valid passphrases following the first system policy is: " + to_string(GetValidPassphrases(1)) << endl;
     cout << "The amount of valid passphrases following the second system policy is: " + to_string(GetValidPassphrases(2)) << endl;
+
+    //Day Five Answers
+    cout << "The amount of steps taken to reach the exit for the first offset change method is: " + to_string(FindExit(1)) << endl;
+    cout << "The amount of steps taken to reach the exit for the second offset change method is: " + to_string(FindExit(2)) << endl;
 }

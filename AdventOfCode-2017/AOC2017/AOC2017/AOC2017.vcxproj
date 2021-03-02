@@ -142,6 +142,7 @@
     <ClCompile Include="AOC2017.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DayFive.h" />
     <ClInclude Include="DayFour.h" />
     <ClInclude Include="DayOne.h" />
     <ClInclude Include="DayTwo.h" />
