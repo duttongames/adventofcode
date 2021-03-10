@@ -1,6 +1,0 @@
-﻿  AOC2019.cpp
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\DayOne.h(11,25): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\DayTwo.h(37,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\DayTwo.h(69,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\DayTwo.h(88,22): warning C4018: '<': signed/unsigned mismatch
-  AOC2019.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\Debug\AOC2019.exe
