@@ -140,19 +140,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AOC2015.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="md5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DayEight.h" />
+    <ClInclude Include="DayEleven.h" />
     <ClInclude Include="DayFive.h" />
     <ClInclude Include="DayFour.h" />
     <ClInclude Include="DayFourteen.h" />
+    <ClInclude Include="DayNine.h" />
     <ClInclude Include="DayOne.h" />
     <ClInclude Include="DaySeven.h" />
     <ClInclude Include="DaySix.h" />
     <ClInclude Include="DayThree.h" />
     <ClInclude Include="DayTwelve.h" />
     <ClInclude Include="DayTwo.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="md5.h" />
   </ItemGroup>

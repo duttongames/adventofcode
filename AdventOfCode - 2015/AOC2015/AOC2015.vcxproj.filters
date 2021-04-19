@@ -24,6 +24,9 @@
     <ClCompile Include="md5.cpp">
       <Filter>Header Files\libs</Filter>
     </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DayOne.h">
@@ -60,6 +63,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DayFourteen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DayNine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DayEleven.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

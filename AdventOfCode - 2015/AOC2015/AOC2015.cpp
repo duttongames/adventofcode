@@ -11,6 +11,8 @@
 #include "DaySix.h";
 #include "DaySeven.h";
 #include "DayEight.h";
+#include "DayNine.h";
+#include "DayEleven.h"
 #include "DayTwelve.h";
 #include "DayFourteen.h";
 
@@ -41,6 +43,14 @@ int main()
 
     //Day Eight Answers
     cout << "The number of string literal characters minus the number of characters in memory is: " + to_string(GetNumberOfCharacters()) << endl;
+
+    //Day Nine Answers
+    cout << "The distance of the shortest route is: " + to_string(GetShortestDistance()) << endl;
+
+    //Day Eleven Answers
+    string firstPassword = GetNextPassword("vzbxkghb");
+    cout << "Santa's next password is: " + firstPassword << endl;
+    cout << "Santa's next password after the first is: " + GetNextPassword(firstPassword) << endl;
 
     //Day Twelve Answers
     cout << "The total of all the numbers in the document is: " + to_string(CountNumbers()) << endl;

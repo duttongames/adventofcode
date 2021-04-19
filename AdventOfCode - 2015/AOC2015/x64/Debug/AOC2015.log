@@ -8,5 +8,7 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\A
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\DaySeven.h(141,60): warning C4319: '~': zero extending 'unsigned int' to 'unsigned __int64' of greater size
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\AOC2015.cpp(13,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\AOC2015.cpp(14,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\AOC2015.cpp(15,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\DayEleven.h(19,3): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\AOC2015.cpp(16,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\AOC2015\AOC2015.cpp(17,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   AOC2015.vcxproj -> C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode - 2015\x64\Debug\AOC2015.exe
