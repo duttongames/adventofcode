@@ -150,8 +150,6 @@ int GetShortestDistance()
 	{
 		int nextDistance = Dijkstra(graphIter->second);
 
-		cout << nextDistance << endl << endl;
-
 		if (nextDistance < shortestDistance)
 		{
 			shortestDistance = nextDistance;

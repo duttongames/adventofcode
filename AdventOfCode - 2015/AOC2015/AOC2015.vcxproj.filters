@@ -74,5 +74,8 @@
     <ClInclude Include="DayEleven.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DayTen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@
 #include "DaySeven.h";
 #include "DayEight.h";
 #include "DayNine.h";
+#include "DayTen.h"
 #include "DayEleven.h"
 #include "DayTwelve.h";
 #include "DayFourteen.h";
@@ -46,6 +47,10 @@ int main()
 
     //Day Nine Answers
     cout << "The distance of the shortest route is: " + to_string(GetShortestDistance()) << endl;
+
+    //Day Ten Answers
+    cout << "The length of the Look and Say result after 40 iterations is: " + to_string(LookAndSay("1321131112", 40).size()) << endl;
+    cout << "The length of the Look and Say result after 50 iterations is: " + to_string(LookAndSay("1321131112", 50).size()) << endl;
 
     //Day Eleven Answers
     string firstPassword = GetNextPassword("vzbxkghb");
