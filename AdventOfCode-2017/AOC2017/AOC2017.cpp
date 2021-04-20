@@ -4,6 +4,7 @@
 #include "DayTwo.h"
 #include "DayFour.h"
 #include "DayFive.h"
+#include "DaySix.h"
 
 int main()
 {
@@ -24,4 +25,7 @@ int main()
     //Day Five Answers
     cout << "The amount of steps taken to reach the exit for the first offset change method is: " + to_string(FindExit(1)) << endl;
     cout << "The amount of steps taken to reach the exit for the second offset change method is: " + to_string(FindExit(2)) << endl;
+
+    //Day Six Answers
+    cout << "The amount of cycles before a duplicate configuration is produced is: " + to_string(DetermineDupeConfig()) << endl;
 }
