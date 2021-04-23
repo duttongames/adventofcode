@@ -4,6 +4,7 @@
 #include "DayOne.h"
 #include "DayTwo.h"
 #include "DayThree.h"
+#include "DayFive.h"
 
 using namespace std;
 
@@ -19,4 +20,9 @@ int main()
     //Day Three Answers
     cout << "The square inches of conflicting claims is: " + to_string(GetSquareInches(1)) << endl;
     cout << "The claim ID that does not conflict with any other claims is: " + to_string(GetSquareInches(2)) << endl;
+
+    //Day Five Answers
+    ReadPolymer();
+    cout << "The amount of units remaining after the polymer has finished reacting is: " + to_string(ReactPolymer(polymer)) << endl;
+    cout << "The amount of units remaining after the problem unit has been removed and the polymer has finished reacting is: " + to_string(FindProblemUnit()) << endl;
 }
