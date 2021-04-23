@@ -2,3 +2,5 @@ C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\Deb
 C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\AOC2019\Debug\AOC2019.pdb
 C:\Users\Georg\Documents\adventofcode\AdventOfCode-2019\Debug\AOC2019.exe
 C:\Users\Georg\Documents\adventofcode\AdventOfCode-2019\Debug\AOC2019.pdb
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\Debug\AOC2019.exe
+C:\Users\Georg\Documents\AdventOfCode\adventofcode\AdventOfCode-2019\Debug\AOC2019.pdb
