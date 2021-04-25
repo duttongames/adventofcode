@@ -16,6 +16,7 @@
 #include "DayEleven.h"
 #include "DayTwelve.h";
 #include "DayFourteen.h";
+#include "DayEighteen.h";
 
 int main()
 {
@@ -50,12 +51,12 @@ int main()
 
     //Day Ten Answers
     cout << "The length of the Look and Say result after 40 iterations is: " + to_string(LookAndSay("1321131112", 40).size()) << endl;
-    cout << "The length of the Look and Say result after 50 iterations is: " + to_string(LookAndSay("1321131112", 50).size()) << endl;
+    //cout << "The length of the Look and Say result after 50 iterations is: " + to_string(LookAndSay("1321131112", 50).size()) << endl;
 
     //Day Eleven Answers
     string firstPassword = GetNextPassword("vzbxkghb");
-    cout << "Santa's next password is: " + firstPassword << endl;
-    cout << "Santa's next password after the first is: " + GetNextPassword(firstPassword) << endl;
+    //cout << "Santa's next password is: " + firstPassword << endl;
+    //cout << "Santa's next password after the first is: " + GetNextPassword(firstPassword) << endl;
 
     //Day Twelve Answers
     cout << "The total of all the numbers in the document is: " + to_string(CountNumbers()) << endl;
@@ -63,4 +64,7 @@ int main()
     //Day Fourteen Answers
     cout << "The distance the fastest reindeer has travelled after 2503 seconds is: " + to_string(GetFastestReindeer(0)) << endl;
     cout << "The winning reindeer has the following points: " + to_string(GetFastestReindeer(1)) << endl;
+
+    //Day Eighteen Answers
+    cout << "The amount of lights that are turned on after 100 steps is: " + to_string(GetLights(100)) << endl;
 }
