@@ -5,6 +5,7 @@
 #include "DayFour.h"
 #include "DayFive.h"
 #include "DaySix.h"
+#include "DayEight.h"
 
 int main()
 {
@@ -28,4 +29,8 @@ int main()
 
     //Day Six Answers
     cout << "The amount of cycles before a duplicate configuration is produced is: " + to_string(DetermineDupeConfig()) << endl;
+
+    //Day Eight Answers
+    ComputeInstructions();
+    cout << "The highest value in the registers after computing the instructions is: " + to_string(FindHighestValue());
 }
