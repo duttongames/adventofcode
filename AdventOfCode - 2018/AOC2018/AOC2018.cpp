@@ -5,6 +5,7 @@
 #include "DayTwo.h"
 #include "DayThree.h"
 #include "DayFive.h"
+#include "DaySeven.h"
 
 using namespace std;
 
@@ -25,4 +26,8 @@ int main()
     ReadPolymer();
     cout << "The amount of units remaining after the polymer has finished reacting is: " + to_string(ReactPolymer(polymer)) << endl;
     cout << "The amount of units remaining after the problem unit has been removed and the polymer has finished reacting is: " + to_string(FindProblemUnit()) << endl;
+
+    //Day Seven Answers
+    ReadSteps();
+    cout << "The order of the steps is: " + DetermineOrder();
 }
