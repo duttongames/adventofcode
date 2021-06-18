@@ -17,6 +17,7 @@
 #include "DayTwelve.h";
 #include "DayFourteen.h";
 #include "DayEighteen.h";
+#include "DayTwentyThree.h";
 
 int main()
 {
@@ -67,4 +68,9 @@ int main()
 
     //Day Eighteen Answers
     cout << "The amount of lights that are turned on after 100 steps is: " + to_string(GetLights(100)) << endl;
+
+    //Day Twenty Three Answers
+    ReadProgram();
+    ExecuteProgram();
+    cout << "The value left in register B when the program finishes executing is: " + to_string(b) << endl;
 }
