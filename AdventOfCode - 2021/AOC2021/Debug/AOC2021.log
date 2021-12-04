@@ -1,0 +1,4 @@
+﻿  AOC2021.cpp
+C:\Users\Georg\Documents\adventofcode\AdventOfCode - 2021\AOC2021\DayTwo.h(24,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Georg\Documents\adventofcode\AdventOfCode - 2021\AOC2021\DayTwo.h(66,21): warning C4018: '<': signed/unsigned mismatch
+  AOC2021.vcxproj -> C:\Users\Georg\Documents\adventofcode\AdventOfCode - 2021\AOC2021\Debug\AOC2021.exe

@@ -4,25 +4,11 @@
 #include <fstream>
 #include <vector>
 
+#include "Intcode.h"
+
 using namespace std;
 
 vector<int> integers;
-
-//Performs the intcode operation specified.
-int IntcodeOps(int operation, int firstValue, int secondValue)
-{
-	//Add two values.
-	if (operation == 1)
-	{
-		return firstValue + secondValue;
-	}
-
-	//Multiply two values.
-	else
-	{
-		return firstValue * secondValue;
-	}
-}
 
 //Reads an intcode program and stores it in a vector.
 void ReadProgram()
@@ -107,7 +93,7 @@ int RunGravityProgram(int method)
 
 					//Perform the opcode oepration.
 					case 3:
-						integersCopy[integersCopy[i]] = IntcodeOps(opcode, valueOne, valueTwo);
+						integersCopy[integersCopy[i]] = IntcodeOps(opcode, 0, valueOne, valueTwo);
 						break;
 				}
 
